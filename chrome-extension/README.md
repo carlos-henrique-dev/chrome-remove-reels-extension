@@ -1,34 +1,47 @@
-# Chrome Extension to Remove Elements by Class Name
+# Remove Reels Extension
 
-This Chrome extension removes all elements from a webpage that have the classname "x1yztbdb x1n2onr6 xh8yej3 x1ja2u2z".
+## Overview
+
+This Chrome extension removes all elements on a webpage with specific class names or text content. It is designed to dynamically monitor and modify the DOM to enhance user experience by removing unwanted elements.
+
+## Features
+
+- Automatically removes elements with the classname `x1yztbdb x1n2onr6 xh8yej3 x1ja2u2z`.
+- Dynamically monitors the DOM for new elements and removes them as they are added.
+- Tracks and displays the number of removed elements in the extension popup.
 
 ## Installation
 
-1. Clone this repository to your local machine:
-   ```
-   git clone <repository-url>
-   ```
-
-2. Navigate to the `chrome-extension` directory:
-   ```
-   cd chrome-extension
-   ```
-
-3. Open Chrome and go to `chrome://extensions/`.
-
-4. Enable "Developer mode" by toggling the switch in the top right corner.
-
-5. Click on "Load unpacked" and select the `src` directory of the cloned repository.
+1. Clone this repository to your local machine.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable "Developer mode" in the top-right corner.
+4. Click "Load unpacked" and select the `chrome-extension` folder.
 
 ## Usage
 
-Once the extension is installed, it will automatically remove all elements with the specified classname from any webpage you visit.
+1. Navigate to any webpage.
+2. The extension will automatically remove elements with the specified classname or text content.
+3. Open the extension popup to view the counter for removed elements.
 
-## Files Overview
+## Development
 
-- **src/background.js**: Background script that manages events and communication.
-- **src/content.js**: Content script that contains the logic to remove elements by classname.
-- **src/manifest.json**: Manifest file that defines the extension's metadata and permissions.
+### Folder Structure
+
+- `src/`: Contains the source code for the extension.
+  - `background.js`: Handles background tasks and message passing.
+  - `content.js`: Contains the logic for DOM manipulation.
+  - `index.html`: The popup interface for the extension.
+  - `manifest.json`: The configuration file for the Chrome extension.
+  - `images/`: Contains icons for the extension.
+
+### Scripts
+
+- `content.js`: Monitors the DOM and removes elements dynamically.
+- `background.js`: Manages the counter and communicates with the popup.
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests for new features or bug fixes.
 
 ## License
 
